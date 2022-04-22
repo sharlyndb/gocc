@@ -62,7 +62,7 @@ RUN tar -cf - $OSX_SDK/ | xz -c - > $OSX_SDK.tar.xz && rm -rf $OSX_SDK
 
 # Actually build the toolchain
 RUN \
-  git config --global url."https://github.com.cnpmjs.org".insteadOf https://github.com && \
+  #git config --global url."https://github.com.cnpmjs.org".insteadOf https://github.com && \
   git clone https://github.com/tpoechtrager/osxcross.git && \
   cd osxcross && git checkout 88cb6e8d0d7675cae7c8a2d66c11f58237101df0 && cd ../ && \
   mv  $OSX_SDK.tar.xz /osxcross/tarballs/ && \
