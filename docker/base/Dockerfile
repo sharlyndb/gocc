@@ -65,7 +65,7 @@ RUN \
   git config --global url."https://gitclone.com/github.com".insteadOf https://github.com && \
   #git clone https://github.com/tpoechtrager/osxcross.git && \
   git clone https://gitclone.com/github.com/tpoechtrager/osxcross.git && \
-  cd osxcross && git checkout 88cb6e8d0d7675cae7c8a2d66c11f58237101df0 && cd ../ && \
+  cd osxcross &&  cd ../ && \
   mv  $OSX_SDK.tar.xz /osxcross/tarballs/ && \
   OSX_VERSION_MIN=10.10 UNATTENDED=1 LD_LIBRARY_PATH=/osxcross/target/lib /osxcross/build.sh
 
